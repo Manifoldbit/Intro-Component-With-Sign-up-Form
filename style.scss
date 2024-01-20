@@ -1,0 +1,226 @@
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+   }
+
+   body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-mobile.png);
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+   }
+
+
+.container{
+    margin: 0 .5em;
+    margin-bottom: 3em;
+
+    &__texts{
+        color: #fff;
+        text-align: center;
+        
+        h1{
+            max-width: 90%;
+            margin: 2em auto .5em auto;
+            line-height: 1.3em;
+        }
+        p{
+            max-width: 95%;
+            margin: 0 auto;
+        }
+    }
+
+    &__button-and-form{
+        margin: 0 auto;
+
+        .try-it-free{
+            padding: 1em 2.5em;
+            width: 100%;
+            background-color:hsl(248, 32%, 49%);
+            color: #fff;
+            font-size: 1.3em;
+            border-radius: .5em;
+            margin:3em 0 1.5em 0;
+            border: none;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+            
+        }
+        form{
+            background-color: #fff;
+            padding: 1em;
+            border-radius: .7em;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            overflow:hidden;
+
+
+            input{
+                width: 100%;
+                padding: 1.5em;
+                border: 1px solid lightgray;
+                border-radius: .5em;
+            }
+
+            input:focus{
+                border:1px solid hsl(248, 32%, 49%);
+                outline: 0;
+               }
+
+
+            input::placeholder{
+                font-weight:bold;
+            }
+
+            #claim-free-trial{
+                padding: 1.5em;
+                width: 100%;
+                margin-top: 1em;
+                background-color:hsl(154, 59%, 51%) ;
+                border: none;
+                border-radius: .7em;
+                color: #fff;
+                text-transform: uppercase;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                
+            }
+
+            #claim-free-trial:hover{
+                cursor: pointer;
+                opacity: .85;
+            }
+
+            p{
+                text-align: center;
+                margin: 1em ;
+                font-size: .8em;
+                color: grey;
+            }
+            a{
+                color: red;
+                text-decoration: none;
+            }
+            i{
+                color:red;
+                position: relative;
+                font-size: .7em;
+            }
+
+        }
+       
+    }
+
+    .form-control {
+        position: relative;
+    }
+
+
+    .form-control.success input {
+        border-color: #2ecc71;
+    }
+
+    .form-control.error input {
+        border-color: #e74c3c;
+        margin-top: 1em;
+    }
+
+    .form-control small {
+        color: #e74c3c;
+        position: relative;
+        visibility: hidden;
+        float:right;
+        margin-top: .3em;
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+    .form-control #error-icon{
+        position: relative;
+        bottom: 2.3em;
+        left: 85%;
+        visibility:hidden;
+
+    }
+
+    .form-control.error #error-icon {
+        visibility: visible;
+    }
+    
+
+}
+
+
+/*Desktop view */
+
+@media (min-width: 800px) {
+    
+    body{
+        height: 100vh;
+    }
+
+    .container{
+        display: flex;
+        height: 100vh;
+        margin: 0 10em;
+
+        &__texts{
+            width: 50%;
+            margin: auto 0;
+            
+            h1,p{
+                text-align: left;
+                margin: .5em 0;
+            }
+            h1{
+                font-size: 3em;
+                line-height: 1.1em;
+            }
+            p{
+                font-size: .9em;
+            }
+        }
+
+        &__button-and-form{
+            width: 50%;
+            display: grid;
+            align-content: center;
+            height: 100%;
+
+            form{
+
+                input{
+                    padding: 1.2em;
+                }
+
+                #claim-free-trial{
+                    padding: 1.2em;
+                }
+
+                .form-control #error-icon{
+                    bottom:2.3em;
+                    left:90%;
+                }
+
+                
+    
+             }
+
+         }
+
+         .try-it-free{
+            padding: .7em;
+            margin: 0 0 1em 0;
+        }
+         
+        
+    }
+
+
+}
