@@ -120,13 +120,19 @@ body {
 .container .form-control.error small {
   visibility: visible;
 }
-.container .form-control #error-icon {
+.container .form-control #firstname-error-icon,
+.container .form-control #lastname-error-icon,
+.container .form-control #password-error-icon,
+.container .form-control #email-error-icon {
   position: relative;
   bottom: 2.3em;
   left: 85%;
   visibility: hidden;
 }
-.container .form-control.error #error-icon {
+.container .form-control.error #firstname-error-icon,
+.container .form-control.error #lastname-error-icon,
+.container .form-control.error #password-error-icon,
+.container .form-control.error #email-error-icon {
   visibility: visible;
 }
 

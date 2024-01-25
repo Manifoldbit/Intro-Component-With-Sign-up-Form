@@ -141,7 +141,10 @@ img {
         visibility: visible;
     }
 
-    .form-control #error-icon{
+    .form-control #firstname-error-icon,
+    .form-control #lastname-error-icon,
+    .form-control #password-error-icon,
+    .form-control #email-error-icon{
         position: relative;
         bottom: 2.3em;
         left: 85%;
@@ -149,7 +152,11 @@ img {
 
     }
 
-    .form-control.error #error-icon {
+    .form-control.error #firstname-error-icon,
+    .form-control.error #lastname-error-icon,
+    .form-control.error #password-error-icon,
+    .form-control.error #email-error-icon
+     {
         visibility: visible;
     }
     
